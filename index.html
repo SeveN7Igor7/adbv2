@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Substitua as importações com os scripts abaixo -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-analytics-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Adicione uma div para exibir mensagens dinâmicas -->
+    <div id="message"></div>
+
+    <div class="login-container">
+        <h2>Bem-vindo ao Sistema</h2>
+        <form id="loginForm">
+            <label for="idsisdm">ID SISDM:</label>
+            <input type="text" id="idsisdm" name="idsisdm" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <!-- Altere o tipo do botão para "button" -->
+            <button type="button" onclick="handleLogin()">Entrar</button>
+
+            <!-- Adicione um elemento para exibir mensagens de erro -->
+            <div id="errorMessage"></div>
+        </form>
+    </div>
+</body>
+</html>
